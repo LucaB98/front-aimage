@@ -52,7 +52,7 @@ export default {
             </div>
             <div class="col">
                 <!-- Corso -->
-                <div class="mb-3">
+                <div class="mb-3 d-flex justify-content-end">
                     <button class="btn btn-success"> Registrati</button>
                 </div>
 
@@ -67,7 +67,7 @@ export default {
 
 <style scoped>
 .btn-success {
-    background-color: #009CA6;
+    background-color: #007A89;
     font-weight: bold;
 
 }
@@ -76,5 +76,12 @@ export default {
     background-color: #00464b;
 
 
+}
+
+form {
+    background-color: #0E1C44;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
 }
 </style>
