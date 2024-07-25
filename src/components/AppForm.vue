@@ -1,13 +1,52 @@
 <script>
+
 export default {
-    name: 'AppForm'
+    name: 'AppForm',
+    data() {
+        return {
+            form: {
+                firstName: '',
+                lastName: '',
+                phone: '',
+                email: '',
+                interest: ''
+            }
+        };
+    },
+    methods: {
+        // funzione per l'invio dei dati
+        async handleSubmit() {
+            try {
+                // endpoint
+                const response = await fetch('http://localhost:8000/api/register', {
+                    method: 'POST',
+                    // formato json
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(this.form)
+                });
+                const data = await response.json();
+                // operazione riuscita
+                if (response.ok) {
+                    alert('Registrazione completata con successo!');
+                    // operazione fallita
+                } else {
+                    alert('Errore: ' + data.message);
+                }
+                // errori
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    }
 };
 </script>
 
 <template>
     <!-- Form -->
     <form class="container">
-        <div class="row row-cols-sm-1 row-cols-md-2">
+        <div class="row row-cols-1 row-cols-md-2">
 
             <div class="col">
                 <!-- Nome -->
@@ -33,8 +72,8 @@ export default {
             <div class="col">
                 <!-- Telefono -->
                 <div class="mb-5">
-                    <label for="telephone" class="form-label">Telefono</label>
-                    <input type="number" class="form-control" id="telephone" placeholder="3920393202">
+                    <label for="phone" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="3920393202">
                 </div>
             </div>
             <div class="col">
