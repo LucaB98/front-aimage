@@ -22,6 +22,7 @@ git clone https://github.com/tuo-username/nome-del-progetto.git
     - npm i & npm run dev.
 
 Ricorda!!! l'app funziona se hai un serve aperto. Lascio in link la repo per la parte Back-end.
+https://github.com/LucaB98/back-aimage <-- link del back-end
 
 Dopo aver eseguito tutti i passaggi e avendo il server aperto l'app e' utilizzabile.
 
