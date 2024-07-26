@@ -1,6 +1,6 @@
 # Front-end aimage
 
-ho creato un semplice form con vue, responsive a tutti i dispositivi. Grazie al form puoi effettuare registrazioni e login. Se effettui il login riceverai il token JWT personale.
+ho creato un semplice form con vue, responsive a tutti i dispositivi con bootstrap. Grazie al form puoi effettuare registrazioni e login. Se effettui il login riceverai il token JWT personale.
 
 ## Requisiti
 
